@@ -1,0 +1,16 @@
+.footer__copyrating {
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #545454;
+  margin: 0;
+}
+
+@media screen and (max-width: 618px) {
+  .footer__copyrating{
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

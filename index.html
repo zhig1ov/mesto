@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <header class="header page__header">
+    <img src="./images/vector.svg" alt="Логотип" class="header__img">
+  </header>
+  <main class="content">
+    <section class="profile page__profile">
+      <div class="profile__avatar"></div>
+      <div class="profile__info">
+        <div class="profile__name-edit">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button aria-label="Edit" type="button" class="profile__button-edit"></button>
+        </div>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
+      <button aria-label="Add" type="button" class="profile__button-add"></button>
+    </section>
+    <section class="cards page__cards">
+      <ul class="cards__items">
+        <template id="card-template">
+          <li class="cards__item">
+            <img src="" alt="" class="cards__img">
+            <div class="cards__interaction">
+              <h2 class="cards__text"></h2>
+              <button aria-label="Like" type="button" class="cards__like"></button>
+            </div>
+            <button aria-label="Delete" type="button" class="cards__delete"></button>
+          </li>
+        </template>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer page__footer">
+    <p class="footer__copyrating">&copy; 2021 Mesto Russia</p>
+  </footer>
+  <div class="popup popup_type_edit">
+    <div class="popup__body">
+      <div class="popup__container">
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <form action="#" method="get" class="form form_type_edit" name="user-information">
+          <input type="text" name="name" value="Жак-Ив Кусто" class="form__input form__input_type_username">
+          <input type="text" name="about-me" value="Исследователь океана" class="form__input form__input_type_user-info">
+          <button type="submit" class="popup__submit-button">Сохранить</button>
+        </form>
+        <button aria-label="Close" type="button" class="popup__close"></button>
+      </div>
+    </div>
+  </div>
+  <div class="popup popup_type_new-card">
+    <div class="popup__body">
+      <div class="popup__container">
+        <h2 class="popup__heading">Новое место</h2>
+        <form action="#" method="get" class="form form_type_add-card" name="user-information">
+          <input type="text" name="name" placeholder="Название" class="form__input form__input_type_title-card">
+          <input type="text" name="link-to-picture" placeholder="Ссылка на картинку" class="form__input form__input_type_link-card">
+          <button type="submit" class="popup__submit-button">Сохранить</button>
+        </form>
+        <button aria-label="Close" type="button" class="popup__close"></button>
+      </div>  
+    </div>
+  </div>
+  <div class="popup popup_type_image">
+    <div class="popup__body">
+      <div class="popup__image-container">
+        <img src=".//images/photo-1559426756-14c161f0dae8 1.png" alt="" class="popup__img">
+        <button aria-label="Close" type="button" class="popup__close"></button>
+        <p class="popup__img-name">Карачаевск</p>
+      </div>
+    </div>
+  </div>
+  <template id="card-template">
+    <li class="cards__item">
+      <img src="" alt="" class="cards__img">
+      <div class="cards__interaction">
+        <h2 class="cards__text"></h2>
+        <button aria-label="Like" type="button" class="cards__like"></button>
+      </div>
+      <button aria-label="Delete" type="button" class="cards__delete"></button>
+    </li>
+  </template>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

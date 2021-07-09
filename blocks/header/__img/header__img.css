@@ -1,0 +1,12 @@
+.header__img {
+  cursor: pointer;
+  position: relative;
+}
+
+@media screen and (max-width: 917px) {
+  .header__img {
+    margin-left: 27px;
+    max-width: 104px;
+    max-height: 24px;
+  }
+}

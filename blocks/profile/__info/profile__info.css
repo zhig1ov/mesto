@@ -1,0 +1,13 @@
+.profile__info {
+  min-width: 336px;
+  display: block;
+  position: relative;
+  margin-bottom: 36px;
+}
+
+
+@media screen and (max-width: 917px) {
+  .profile__info {
+    min-width: 282px;
+  }
+}

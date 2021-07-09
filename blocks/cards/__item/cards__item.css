@@ -1,0 +1,12 @@
+.cards__item {
+  background-color: white;
+  object-fit: cover;
+  max-width: 282px;
+  min-height: 361px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}

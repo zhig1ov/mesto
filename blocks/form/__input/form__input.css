@@ -1,0 +1,30 @@
+.form__input {
+  border: 0;
+  color: black;
+  height: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0, 0.2);
+  min-width: 358px;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.form__input:focus {
+  outline-color: black;
+}
+
+.form__input:last-of-type {
+  margin: 0 auto 45px;
+}
+
+@media screen and (max-width: 618px) {
+  .form__input {
+    min-width: 238px;
+  }
+}

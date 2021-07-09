@@ -1,0 +1,22 @@
+.profile__avatar {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-right: 30px;
+  background-image: url(../../../images/avatar.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  background-color: black;
+}
+
+@media screen and (max-width: 917px) {
+  .profile__avatar {
+    margin: 0 auto 26px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .profile__avatar {
+    margin: 0 auto 22px;
+  }
+}
