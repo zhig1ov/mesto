@@ -1,12 +1,12 @@
-const editPopup = document.querySelector('.popup_type_edit')
-const addCardPopup = document.querySelector('.popup_type_new-card')
-const openEditButton = document.querySelector('.profile__button-edit')
-const openAddButton = document.querySelector('.profile__button-add')
-const editPopupClose = editPopup.querySelector('.popup__close')
-const addCardPopupClose = addCardPopup.querySelector('.popup__close')
+const popupProfile = document.querySelector('.popup_type_edit')
+const popupAddCard = document.querySelector('.popup_type_new-card')
+const buttonProfileEdit  = document.querySelector('.profile__button-edit')
+const buttonAddCard = document.querySelector('.profile__button-add')
+const popupProfileClose = popupProfile.querySelector('.popup__close')
+const popupCloseAddCard = popupAddCard.querySelector('.popup__close')
 
 const popupImage = document.querySelector('.popup_type_image')
-const closePopupImage = popupImage.querySelector('.popup__close')
+const PopupImageClose = popupImage.querySelector('.popup__close')
 const popupCardImage= document.querySelector('.popup__img')
 const popupImageTitle = popupImage.querySelector('.popup__img-name')
 
@@ -24,41 +24,41 @@ function closePopup (popup) {
 
 //Функциональность для открытия попапов =>
 
-openEditButton.addEventListener('click', () => {
+buttonProfileEdit .addEventListener('click', () => {
   jobInput.value = profileDescription.textContent
   nameInput.value = profileName.textContent
-  openPopup(editPopup)
+  openPopup(popupProfile)
 })
 
-openAddButton.addEventListener('click', () => {
-  openPopup(addCardPopup)
+buttonAddCard.addEventListener('click', () => {
+  openPopup(popupAddCard)
 })
 
 //Функциональность для закрытия попапов =>
 
-editPopupClose.addEventListener('click', () => {
-  closePopup(editPopup)
+popupProfileClose.addEventListener('click', () => {
+  closePopup(popupProfile)
   
 })
-addCardPopupClose.addEventListener('click', () => {
-  closePopup(addCardPopup)
+popupCloseAddCard.addEventListener('click', () => {
+  closePopup(popupAddCard)
 })
 
-closePopupImage.addEventListener('click', () => {
+PopupImageClose.addEventListener('click', () => {
   closePopup(popupImage)
 })
 
 //Функциональность редактирования профиля =>
 
-const formPopupEdit = editPopup.querySelector('.form_type_edit')
+const formPopupEdit = popupProfile.querySelector('.form_type_edit')
 const nameInput = document.querySelector('.form__input_type_username')
 const jobInput = document.querySelector('.form__input_type_user-info')
 const profileName = document.querySelector('.profile__name')
 const profileDescription = document.querySelector('.profile__description')
-const editPopupSaveButton = formPopupEdit.querySelector('.popup__submit-button')
+const popupProfileSaveButton = formPopupEdit.querySelector('.popup__submit-button')
 
-editPopupSaveButton.addEventListener('click', () => {
-  closePopup(editPopup)
+popupProfileSaveButton.addEventListener('click', () => {
+  closePopup(popupProfile)
 })
 
 function submitFormProfile (evt) {
@@ -80,20 +80,20 @@ function createCard(card) {
   const cardElement = cardTemplate.querySelector('.cards__item').cloneNode(true);
   const cardTitle = cardElement.querySelector('.cards__text');
   const cardImage = cardElement.querySelector('.cards__img');
-  const cardLikeButton = cardElement.querySelector('.cards__like');
-  const cardDeleteButton = cardElement.querySelector('.cards__delete');
+  const buttonLikeCard = cardElement.querySelector('.cards__like');
+  const buttonDeleteCard = cardElement.querySelector('.cards__delete');
 
   cardTitle.textContent = card.name;
   cardImage.setAttribute('src', card.link);
   cardImage.setAttribute('alt', card.name);
   
 
-cardLikeButton.addEventListener('click', function(evt) {
+buttonLikeCard.addEventListener('click', function(evt) {
     evt.target.classList.toggle('cards__like_active');
   });
 
-  cardDeleteButton.addEventListener('click', function() {
-    const deleteCardElement = cardDeleteButton.closest('.cards__item');
+  buttonDeleteCard.addEventListener('click', function() {
+    const deleteCardElement = buttonDeleteCard.closest('.cards__item');
     deleteCardElement.remove();
   })
 
@@ -119,7 +119,7 @@ formAddCard.addEventListener('submit', (evt) => {
     link: imageCardInput.value
   })
   formAddCard.reset()
-  closePopup(addCardPopup)
+  closePopup(popupAddCard)
 })
 
 const loadingCard = () => {
